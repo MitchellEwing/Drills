@@ -4,7 +4,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-df = pd.read_csv('./data_for_submits/DFEVX.csv')
+df = pd.read_csv('./assets/DFEVX.csv')
 date = df['Date']
 close = df['Close']
 mean = np.mean(close)
