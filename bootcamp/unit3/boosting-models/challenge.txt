@@ -1,0 +1,35 @@
+Challenge: What model can answer this question?
+
+Identify which supervised learning method(s) would be best for addressing that particular problem.
+
+Situations:
+
+1. Predict the running times of prospective Olympic sprinters using data from the last 20 Olympics.
+2. You have more features (columns) than rows in your dataset.
+3. Identify the most important characteristic predicting likelihood of being jailed before age 20.
+4. Implement a filter to “highlight” emails that might be important to the recipient
+5. You have 1000+ features.
+6. Predict whether someone who adds items to their cart on a website will purchase the items.
+7. Your dataset dimensions are 982400 x 500
+8. Identify faces in an image.
+9. Predict which of three flavors of ice cream will be most popular with boys vs girls.
+
+Responses:
+
+1. As running time is a continuous variable, linear regression would be best suited to address this problem. You can further explore this problem by adding categorical variable "medal_winner" to the dataset, turn into a binary logistic regression model, and predict whether prospective sprinters will win a medal.
+
+2. Lasso regression is an efficient method of feature selection when dealing with an unmanageably large feature space. Lasso "Least Absolute Shrinkage and Selection Operator" is a model optimization mechanic that works by trying to force small parameter estimates to be equal to zero, effectively dropping them from the model. This can prevent overfitting and also works as an embedded feature selection method -> this can reduce the number of features. A Random Forest Classifier, in conjunction with PCA "Principal Component Analysis" & feature correlation analysis could also be applied. Additionally, identifying features with insignificant means could be another step. Identifying the most relevant features related to the target/outcome allows us to remove unrelated features/columns.
+
+3. Decision trees/RFC could address discovering the determining characteristic of being jailed before 20. RFC performs implicit feature selection and provides an outline of feature importance. You can set the depth of the tree and the number of features used in each rule or split. Random Forests use random subsets of features for each split and is only looking at the random subspace created by a random subset of some of the features as possibilities to generate that rule. A further extension of this question, "Predict the individuals who will be jailed before age 20", could be answered using a binary logistic model.
+
+4. Bernoulli Naive Bayes classifier would be relevant. Naive Bayes is able to train on relatively small amounts of data, yet achieves good accuracy scores. One could construct features based on what the recipient deems "important". Naive Bayes assumes underlying data is independent of one another (emails are in human text and can be constructed in infinite ways). Categorical outcome of 1 or 0 would be initially set by the recipient, and then the model is trained.
+
+5. Assuming the features data is normally-distributed & the relationships among variables are linear, PCA could be a really good choice, although this isn't a requirement. Correlation matrices can also be used to identify the most relevant features. One can then reduce the dataset to the smaller amount of features.
+
+6. Predicting whether someone will buy or not (binary outcome) based on features such as # of items in their cart, which types of items, cost, time spent for items in cart, time spent on website, etc could be modeled with logistic regression. One can find the % probability of the person purchasing the items.
+
+7. For a dataset with 491,200,000 values, PCA is most likely the best path to discovering the most relevant features. Depending on what one is trying to solve with the dataset, categorical features can be added or the feature set can be narrowed down given some condition. Running SVM would break my computer. Could also randomly split the 982,400 rows 10 ways & train the 500 features on 98,240 rows, but further work delving into identifying the most relevant features would be best.
+
+8. Gradient Boosting with cross-validation to check for overfitting is probably best here. RFC would be option 2, with various facial aspects as features.
+
+9. Predicting flavor popularity between boys and girls could be modeled with SVM, given some feature information is provided along the lines of rating/likeability for each of the 3 flavors.  SVM can work with multi-dimensional data thereby providing hyperplane boundary line. 
