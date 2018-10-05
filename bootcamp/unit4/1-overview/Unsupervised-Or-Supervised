@@ -1,0 +1,16 @@
+For each of these scenarios decide if you could use supervised or unsupervised techniques, or both!
+
+1. Define the likelihood that an individual will contract a specific disease.
+Supervised Learning.
+
+2. Translate a set of images into variables for modeling.
+Unsupervised Learning.
+
+3. An ecommerce company wants to identify power users.
+Unsupervised Learning where you group users using clustering method, then supervised learning to model user characteristics for each group.
+
+4. That same company wants to see shopping patters in users.
+Unsupervised Learning.
+
+5. You want to reduce the number of variables inputting into your random forest model. 
+Unsupervised Learning.
