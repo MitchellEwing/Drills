@@ -1,0 +1,28 @@
+# DRILL: When to Use Surveys
+
+State whether a survey would be the best option for answering each of the following questions:
+
+1. Popularity of various Uber drivers.
+
+Yes, with a rating scale after the customer has finished the ride.
+
+2. A grocery store wants to know how much people like strawberry, chocolate, and vanilla ice cream.
+
+Not necessary, better to look at ice cream sales data.
+
+3. Trojan wants to know whether their condoms are more popular among straight or gay people.
+
+Yes, although will have to apply weights & must consider possibility of bias in responses.
+
+4. Recently, rental rates for HappyCars have increased by 30%, which is quite unusual. You want to find out why this is happening and how to keep the increase going. 
+
+Yes, with a survey about customer's experience & brand awareness. Can use most types of survey questions.
+
+5. Assessing the success rate of a new advertising campaign. 
+
+Yes and no. Can survey about brand awareness, but can also just look at sales data before/after the campaign.
+
+6. Measuring the effect of nurse/patient ratio on patient recovery rates in hospital wards.
+
+No & a survey for this can lead to biased responses.
+
